@@ -1,0 +1,17 @@
+namespace WpfNav.Server.Tools;
+
+/// <summary>Tool descriptions: when to use each tool, with one example call.</summary>
+public static class ToolText
+{
+    public const string Overview = "Map of the C#/XAML repo: solutions, projects in dependency order (kind, target framework, references), key packages, entry points and top folders. Use it when the repo or project structure is unfamiliar; a known target needs no overview. scope=<project name or folder> gives namespaces, type roles (View, ViewModel, Service…), resource dictionaries and largest files for one area. Sections that do not fit max_tokens are named in an \"omitted:\" line. Example: overview(scope=\"Contoso.Orders\")";
+    public const string Outline = "Structure of .cs/.xaml files without reading them. C#: types and members with signatures and line ranges, no bodies. XAML: x:Class, code-behind, resources, bindings, commands and named elements. Use it to inspect structure or choose members; read a known member directly with read_symbol. A folder gives one line per type. A long outline ends with a continuation: repeat the same paths and level with its offset and entry_offset. Example: outline(paths=[\"src/Orders/ViewModels/OrderEditViewModel.cs\"])";
+    public const string FindSymbol = "Find declarations by name across the repo, to discover or disambiguate them: types, members, XAML x:Key resources and x:Name elements. query accepts partial names, Type.Member, * wildcards and camelCase initials (OEVM). Filter with kind, project, path or derives_from (base type, matched by name, includes indirect subclasses). One line per match with path:line. Example: find_symbol(query=\"*\", derives_from=\"ObservableObject\")";
+    public const string ReadSymbol = "Source of one member or type, with doc comments, attributes and line numbers, instead of reading the whole file; call it directly when you know the target. symbol is Name, Type.Member, Namespace.Type.Member or path:line; path= limits the lookup to one file. Long source ends with a continuation: repeat the same symbol with its line_offset and column_offset (column_offset continues one very long line). A type too large returns its outline; line_offset=0 pages its source instead. Example: read_symbol(symbol=\"OrderEditViewModel.SaveAsync\")";
+    public const string SearchCode = "Search .cs/.xaml files; hits are grouped by file and by containing member or XAML element, with counts and one sample line per group, instead of hundreds of raw lines. pattern is a .NET regex unless literal=true; whole_word, case_sensitive (default true), file_kind (cs, xaml, all), project and path narrow it. Matches single lines only; more groups continue with the offset from the note. Example: search_code(pattern=\"CustomerId\", whole_word=true)";
+
+    public const string MaxTokensOverview = "Estimated-token budget for this result, 256-2500 (default 2500). Smaller gives a shorter summary.";
+    public const string MaxTokensOutline = "Estimated-token budget for this page, 256-3000 (default 3000). Smaller gives shorter pages.";
+    public const string MaxTokensFindSymbol = "Estimated-token budget for this result, 256-2000 (default 2000). Smaller gives fewer matches per page.";
+    public const string MaxTokensReadSymbol = "Estimated-token budget for this page, 256-4000 (default 4000). Smaller gives shorter source pages.";
+    public const string MaxTokensSearchCode = "Estimated-token budget for this result, 256-2500 (default 2500). Smaller gives fewer groups per page.";
+}

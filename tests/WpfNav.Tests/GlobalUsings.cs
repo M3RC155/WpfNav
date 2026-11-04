@@ -1,0 +1,17 @@
+global using System.Text;
+global using WpfNav.Core;
+global using WpfNav.Core.Inventory;
+global using WpfNav.Tests.TestSupport;
+global using WpfNav.Core.Output;
+global using WpfNav.Core.Model;
+global using WpfNav.Core.Parsing;
+global using System.Text.RegularExpressions;
+global using WpfNav.Core.Navigation;
+global using System.Diagnostics;
+global using Microsoft.Extensions.Logging;
+global using ModelContextProtocol.Client;
+global using ModelContextProtocol.Protocol;
+global using WpfNav.Server;
+global using WpfNav.Core.Index;
+global using WpfNav.Core.Projects;
+global using WpfNav.Core.Search;

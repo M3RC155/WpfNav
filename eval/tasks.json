@@ -1,0 +1,52 @@
+[
+  {
+    "id": "getting-started-projects",
+    "prompt": "List the projects in the Getting Started solution and say which of them are WPF apps.",
+    "expected": ["HelloWorld", "ExpenseItIntro", "MultiPage", "SimpleLayout"]
+  },
+  {
+    "id": "htmltoxaml-tables",
+    "prompt": "In HtmlToXamlDemo, which methods convert HTML tables, and what does each one do?",
+    "expected": ["AddTable", "AnalyzeTableStructure", "AddTableRowsToTableBody", "AddDataToTableCell"]
+  },
+  {
+    "id": "gallery-navigation",
+    "prompt": "How does WPFGallery navigate between pages? Name the classes involved and the method that performs the navigation.",
+    "expected": ["NavigationService", "Navigate", "RootContentFrame"]
+  },
+  {
+    "id": "validationrule-subclasses",
+    "prompt": "Which classes in this repo derive from ValidationRule? Give each class name and file.",
+    "expected": ["AgeRangeRule", "FutureDateRule", "EmailValidationRule", "AlphabeticValidationRule"]
+  },
+  {
+    "id": "paste-handling",
+    "prompt": "Where is ApplicationCommands.Paste handled? List the files and members.",
+    "expected": ["ThumbViewer", "defaultstickynotestyle"]
+  },
+  {
+    "id": "expenseit-report",
+    "prompt": "In ExpenseIt, which view shows an expense report and where does its data come from? Give file paths.",
+    "expected": ["MainWindow", "ExpenseData", "ExpenseReport"]
+  },
+  {
+    "id": "custom-routed-commands",
+    "prompt": "Which samples define their own RoutedCommand or RoutedUICommand, and where is each one bound?",
+    "expected": ["ColorCmd", "FontUpdateCommand", "CustomCommand", "CreateExpenseReportCommand"]
+  },
+  {
+    "id": "gallery-viewmodel",
+    "prompt": "What properties and commands does the view model of the WPFGallery main window expose?",
+    "expected": ["ApplicationTitle", "SelectedControl", "Back", "Forward"]
+  },
+  {
+    "id": "dispatcher-usage",
+    "prompt": "Which classes in the Threading samples call Dispatcher.BeginInvoke or Dispatcher.InvokeAsync, and why?",
+    "expected": ["UsingDispatcher", "SingleThreadedApplication"]
+  },
+  {
+    "id": "calculator-flow",
+    "prompt": "In CalculatorDemo, how does a button press reach the calculation logic? Name the handler and the methods it calls.",
+    "expected": ["DigitBtn_Click", "OperBtn_Click", "ProcessOperation", "CalcResults"]
+  }
+]

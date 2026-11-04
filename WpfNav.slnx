@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/WpfNav.Core/WpfNav.Core.csproj" />
+    <Project Path="src/WpfNav.Server/WpfNav.Server.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/WpfNav.Tests/WpfNav.Tests.csproj" />
+  </Folder>
+</Solution>
